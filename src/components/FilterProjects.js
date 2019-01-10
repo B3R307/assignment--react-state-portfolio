@@ -80,13 +80,15 @@ class FilterProjects extends Component {
 
           <div className='projects-list'>
 
-            {/* Step (1) --- .map() the projectData to JSX  */}
+            /* Step (1) --- .map() the projectData to JSX  */
 
           </div>
         </section>
 
     );
   }
+}
+
 }
 
 export default FilterProjects
