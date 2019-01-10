@@ -10,6 +10,8 @@ class App extends Component {
         <span className={this.props.techComponents}> </span>
         <ShowHideTech/>
         <span className="{techlist}"/>
+        <ProjectComponent/>
+        <span className="{project}"/>
 
       </div>
     );

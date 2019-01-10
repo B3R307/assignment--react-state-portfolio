@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { projectData } from '../data/datasource'
 
+
 /*  Advice:
    (1) Create the component's JSX by using .map() on `projectData`
 
@@ -24,6 +25,38 @@ import { projectData } from '../data/datasource'
  */
 
 class FilterProjects extends Component {
+   constructor(){
+     super()
+
+     this.state ={
+       showProjects : "All"
+     }
+   }
+
+   _lookStateClick(clickedProject){
+      this.setState({
+        showProjects : clickedProject
+
+      })
+   }
+
+   _renderProjectComponents(s){
+
+     let filteredProjectList = projectData.filter(function(proObj){
+        if(showProjects === 'All')
+         return true
+
+         if(proObj.project === showProjects){
+            return true
+        } else{
+          return false
+        }
+    })
+
+    let componentsArr = filteredProjectList.map(function(proObj){
+
+
+    })
 
   render() {
 
@@ -55,3 +88,5 @@ class FilterProjects extends Component {
     );
   }
 }
+
+export default FilterProjects
